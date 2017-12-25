@@ -19,7 +19,7 @@ class Counter:
 
             parts = envelop.split("_")
             share_common = parts[1]
-            print("Share Common {0} ").format(share_common)
+            print("Share {0} ").format(share_common)
             self.storage.write_share(share_common)
             self.storage.write_voter(vote)
             self.storage.result()
