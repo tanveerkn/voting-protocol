@@ -1,9 +1,27 @@
 from Voter import Voter
 import random
 
-for no in range(10):
-    new_voter = Voter()
-    new_voter.cast_vote(random.randint(0, 1))
+import time
+
+
+class Timer:
+    def __enter__(self):
+        self.start = time.clock()
+        return self
+
+    def __exit__(self, *args):
+        self.end = time.clock()
+        self.interval = self.end - self.start
+
+
+with Timer() as t:
+    for no in range(10):
+        start = time.clock()
+        new_voter = Voter()
+        new_voter.cast_vote(random.randint(0, 1))
+        end = time.clock()
+        print('For each Voter time taken is %.03f sec.' % float(end - start))
+print('Whole process took %.03f sec.' % t.interval)
 
 
 
