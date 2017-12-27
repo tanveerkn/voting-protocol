@@ -8,6 +8,7 @@ class Voter():
 
     def cast_vote(self, vote):
         yes, no = self.__v_server.genrate_vote()
+
         print("User input {0}").format(vote)
         if vote == 1:
             self.__c_server.add_vote(yes, 1, self.__v_server)
