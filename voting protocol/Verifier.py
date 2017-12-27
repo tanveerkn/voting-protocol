@@ -66,16 +66,20 @@ class Verifier:
         else:
             print("vote not counted")
 
-    def decrypt(self,vote):
-        V_id=str(decrypt(priv,pub,vote))
-        print(V_id)
-        return V_id
+    # def decrypt_result(self,vote,):
+    #     V_id=str(decrypt(priv,pub,vote))
+    #     print(V_id)
+    #     return V_id
+
+    def decrypt_result(self,enc_share_all,):
+        decrypt_result = decrypt(priv, pub, enc_share_all)
+        print ("decrypt",decrypt_result)
+        return decrypt_result
+    #
 
 
 
-
-
-    #def verifyVote(self, verifyVote):
+        #def verifyVote(self, verifyVote):
     #    vote = [vote[1]
     #    for vote in self.__verifiers
     #        if CryptContext.verify(vote[0], verifyVote)]
