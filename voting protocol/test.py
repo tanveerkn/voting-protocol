@@ -15,14 +15,13 @@ class Timer:
 
 
 with Timer() as t:
-    for no in range(10):
+    for no in range(2):
         start = time.clock()
         new_voter = Voter()
         new_voter.cast_vote(random.randint(0, 1))
         end = time.clock()
         print('For each Voter time taken is %.03f sec.' % float(end - start))
 print('Whole process took %.03f sec.' % t.interval)
-
 
 
 # from Verifier import get_env1,get_env2
