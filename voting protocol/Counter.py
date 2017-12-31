@@ -42,18 +42,18 @@ class Counter:
         self.share_common_storage=self.share_common_storage+str(res)
         print(e_add(pub,vote,vote))
 
-    # def enc_share(self, pub, share_common,):
-    #     print(pub,share_common)
-    #     enc_share_all=e_add(pub,share_common,share_common)
-    #     print("share_add",enc_share_all)
-    #     # for char in enc_share_all:
+     def enc_share(self, pub, share_common,):
+         print(pub,share_common)
+         enc_share_all=e_add(pub,share_common,share_common)
+         print("share_add",enc_share_all)
+         # for char in enc_share_all:
     #
-    #     self.share_common_storage.append(enc_share_all)
-    #     self.verify_server.decrypt_result()
-    #
-    #     print(self.share_common_storage)
+         self.share_common_storage.append(enc_share_all)
+         self.verify_server.decrypt_result()
+    
+         print(self.share_common_storage)
 
-        # return enc_share_all
+         return enc_share_all
 
         #yes, no = pickle.load(open("votesCount.pickle", "rb"))
         # yes =""
